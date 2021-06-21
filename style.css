@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: white;
+    text-align: center;
+}
+
+body{
+    padding: 10px;
+    background-color: #cccccc;
+    text-align: center;
+}
+
+body > p{
+    padding: 10px;
+}
+
+input{
+    width: 10%;
+    margin: 10px;
+}
+
+button{
+    display: inline-block;
+}
+
+#gameScreen{
+    background-color: black;
+    text-align: center;
+    width: 80%;
+    visibility: hidden;
+}
+
+#textScreen{
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    visibility: hidden;
+}
+
+#hintMessage{
+    padding: 10px;
+}
+
+#rq{
+    color: red;
+    font-weight: bold;
+}
