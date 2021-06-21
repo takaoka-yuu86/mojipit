@@ -10,19 +10,21 @@
 <body>
     <header>
         <h1>
-            英単語ヌメロン
+            もじぴっと_demo
         </h1>
     </header>
-    <p>コンピューターの英単語を予想して4文字のアルファベットを入力してください</p>
+    <p>表示された文字と同じ文字を入力してみよう！</p>
+    <p id="test-table"></p>
+
     <div class="input">
         <input type="text" id="guess">
     </div>
 
-  
+
     <div id="rq">
         <p> <sapn id="errMes"></sapn></p>
     </div>
-  
+
     <div class="buttons">
         <input type="button" value="入力" id="btn">
         <input type="button" value="諦め" id="btn_giveUp">
@@ -38,10 +40,10 @@
             <p> <span id="biteValue"></span> Bite</p>
         </div>
     </div>
-    
+
     <canvas id="textScreen" width="400" height="40"></canvas>
     <canvas id="gameScreen" width="400" height="140"></canvas>
     <script src="script.js" type="module"></script>
-   
+
 </body>
 </html>

@@ -22,6 +22,8 @@ let bite = 0;
 
 let count = 0;
 
+
+
 const wordsNum = wordsArray.length;
 
 function getRandomInt(){
@@ -37,7 +39,7 @@ function checkInput(){
     if(guessStr.length != digit){
         return 1;
     }
-    
+
     //同じアルファベットを含んでいる場合
     for(var i = 0; i< digit; i++){
         for(var j = 0; j < i; j++){
@@ -58,7 +60,7 @@ function checkInput(){
 }
 
 function judge(answerArr,guessStr){
-    
+
     for(var i = 0; i < digit; i++){
 
         for(var j = 0; j < digit; j++){
@@ -88,12 +90,15 @@ function resetEatBite(){
 answerArr = wordsArray[getRandomInt()];
 console.log(answerArr);
 
+var element = document.getElementById('test-table');
+element.innerHTML = answerArr;
+
 button.addEventListener('click',function(){
 
-    errMes.innerHTML = ""; 
+    errMes.innerHTML = "";
 
     let isCheckedStr = checkInput();
-    
+
     switch(isCheckedStr){
         case 1: errMes.innerHTML = "4文字のアルファベットを入力してください";break;
         case 2: errMes.innerHTML = "全て異なるアルファベットを入力して下さい";break;
@@ -101,7 +106,7 @@ button.addEventListener('click',function(){
     }
 
     if(typeof isCheckedStr == "string"){
-        
+
         resetEatBite();
 
         judge(answerArr,isCheckedStr);
@@ -116,7 +121,7 @@ button.addEventListener('click',function(){
         tryValue.innerHTML = count;
 
         document.getElementById('tryMessage').style.display = 'block';
-        
+
     }
 
     if(eat == digit){
